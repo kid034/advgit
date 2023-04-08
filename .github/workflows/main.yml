@@ -16,7 +16,7 @@ on:
 jobs: 
 
   FirstJob:
-    runs-on: ubuntu-latesterr
+    runs-on: ubuntu-latest
     
     steps:
     - name: Print HW
