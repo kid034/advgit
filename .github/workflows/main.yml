@@ -23,8 +23,8 @@ jobs:
       run: echo "Hello World"
     - name: Print ver
       run: |
-        echo "cpu  : lscpu"
-        echo "ram  : free"
+        echo "cpu  : $(lscpu)"
+        echo "ram  : $(free)"
         echo "APP  : ${{ env.APPLICATION }}"
         echo "PACK : ${{ env.PACKAGE }}"
     - name: List dir
