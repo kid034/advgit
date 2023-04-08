@@ -4,6 +4,9 @@
 #------------------------------
 
 name: PipeActions
+env: 
+  APPLICATION : "MyFirstPipe"
+  PACKAGE     : "project-${{ github.sha }}"
 
 on: 
   push:
@@ -18,6 +21,12 @@ jobs:
     steps:
     - name: Print HW
       run: echo "Hello World"
+    - name: Print ver
+      run: |
+        echo "msg  : msg1"
+        echo "msg  : msg2"
+        echo "APP  : ${{ env.APPLICATION }}"
+        echo "PACK : ${{ env.PACKAGE }}"
       
     
   SecondJob:
@@ -27,4 +36,7 @@ jobs:
     steps:
     - name: Print HD
       run: echo "Hello Dude!"
+    - name: Print ver
+      run: |
+        echo "${{ env.APPLICATION }}:${{ env.PACKAGE }}"
       
