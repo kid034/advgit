@@ -27,6 +27,12 @@ jobs:
         echo "msg  : msg2"
         echo "APP  : ${{ env.APPLICATION }}"
         echo "PACK : ${{ env.PACKAGE }}"
+    - name: List dir
+      run: ls -la
+    - name: Clone repo
+      run: actions/checkout@v1
+    - name: List dir
+      run: ls -la
       
     
   SecondJob:
@@ -39,4 +45,7 @@ jobs:
     - name: Print ver
       run: |
         echo "${{ env.APPLICATION }}:${{ env.PACKAGE }}"
-      
+    - name: Check AWS module
+      run: aws --version
+    - name: Check zip
+      run: zip
