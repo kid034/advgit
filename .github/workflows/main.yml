@@ -25,7 +25,7 @@ jobs:
       run: |
         echo "msg  : msg1"
         echo "msg  : msg2"
-        echo "APP  : ${{ env.APPLICATION }}"
+        echo "APP  : ${{ env.APPLICATION }}
         echo "PACK : ${{ env.PACKAGE }}"
     - name: List dir
       run: ls -la
